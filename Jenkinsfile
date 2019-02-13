@@ -10,6 +10,7 @@ pipeline {
         }
         stage ('Build') {
               steps{
+                    sh "cd .."
                     sh "zip -r movieanalyst-website.zip movieanalyst-website"
                   
               }
