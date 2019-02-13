@@ -18,8 +18,7 @@ pipeline {
         }
           stage ('FrontA') {
               steps{
-              sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.1.27', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'echo "FrontA"', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'movieanalyst-website.zip', useAgentForwarding: true)], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])            
-                   }
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.1.27', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'sudo tar xvzf movieanalyst-web site.tar.gz', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'test000_master', useAgentForwarding: true)], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])                   }
         }      
         
         stage('FrontB'){
