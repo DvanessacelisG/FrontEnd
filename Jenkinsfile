@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {         
-        stage ('clone') {
+        stage ('Clone & Clean') {
               steps{
-                    sh "git clone 'https://github.com/DvanessacelisG/FrontEnd.git"
+                    sh "git clone https://github.com/DvanessacelisG/FrontEnd.git"
                     sh "rm -rf movieanalyst-website"
               }
         }
