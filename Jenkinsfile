@@ -10,7 +10,7 @@ pipeline {
               steps{
                   dir('/var/lib/jenkins/workspace/'){
                    // sh "zip -r movieanalyst-website.zip movieanalyst-website"
-                  sh "tar -zcvf movieanalyst-website.tar.gz test000_master"
+                  sh "tar -zcvf movieanalyst-website.tar.gz FrontE_master"
                   }
               }
         }
