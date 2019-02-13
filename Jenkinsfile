@@ -16,7 +16,7 @@ pipeline {
         }
           stage ('FrontA') {
               steps{
-                  dir('/var/lib/jenkins/workspace/test000_master'){
+                  dir('/var/lib/jenkins/workspace/'){
                 sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.1.27', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'movieanalyst-website.tar.gz', useAgentForwarding: true)], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])                  }     
               } 
           }
