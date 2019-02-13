@@ -10,10 +10,10 @@ pipeline {
         }
         stage ('Build') {
               steps{
-                  dir('/var/lib/jenkins/workspace')
+                  dir('/var/lib/jenkins/workspace'){
                    // sh "zip -r movieanalyst-website.zip movieanalyst-website"
                   sh "tar -zcvf movieanalyst-website.tar.gz movieanalyst-website"
-                  
+                  }
               }
         }
           stage ('FrontA') {
