@@ -10,7 +10,7 @@ pipeline {
         }
         stage ('Build') {
               steps{
-                    sh "zip -r movieanalyst-website.zip /movieanalyst-website"
+                    sh "zip -r movieanalyst-website.zip movieanalyst-website"
                   
               }
         }
