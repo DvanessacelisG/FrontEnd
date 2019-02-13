@@ -8,7 +8,7 @@ pipeline {
               }
         stage ('Build') {
               steps{
-                    sh "zip -r movieanalyst-website /var/lib/jenkins/workspace"
+                    sh "zip -r movieanalyst-website.zip /var/lib/jenkins/workspace/Front"
                   
               }
           
