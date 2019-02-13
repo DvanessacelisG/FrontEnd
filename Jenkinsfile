@@ -16,7 +16,7 @@ pipeline {
         }
           stage ('ssh') {
               steps{
-                    sh "scp -i /home/ubuntu/AWS/VanessaCelis.pem /var/lib/jenkins/workspace/test1_master/movieanalyst-website.zip ubuntu@12.0.1.27:/home/ubuntu"
+                    sh "scp -i /home/ubuntu/AWS/VanessaCelis.pem /var/lib/jenkins/workspace/test000_master/movieanalyst-website.zip ubuntu@12.0.1.27:/home/ubuntu"
                   
               }
         }      
