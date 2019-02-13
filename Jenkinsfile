@@ -10,7 +10,6 @@ pipeline {
         }
         stage ('Build') {
               steps{
-                    sh "mkdir movieanalyst-website"
                     sh "zip -r movieanalyst-website.zip movieanalyst-website"
                   
               }
