@@ -17,7 +17,7 @@ pipeline {
           stage ('ssh') {
               steps{
                     sh "scp -i /home/ubuntu/AWS/VanessaCelis.pem -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/test000_master/movieanalyst-website.zip ubuntu@12.0.1.27:/home/ubuntu"
-                  
+                    sh "unzip movieanalyst-website..zip -d movieanalyst-website." 
               }
         }      
         
