@@ -3,9 +3,9 @@ pipeline {
     stages {         
         stage ('Clone & Clean') {
               steps{
-         
+                     sh "rm -rf FrontEnd"
                     sh "git clone https://github.com/DvanessacelisG/FrontEnd.git" 
-                    sh "rm -rf movieanalyst-website"
+                   
               }
         }
         stage ('Build') {
