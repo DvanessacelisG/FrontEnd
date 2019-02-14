@@ -22,8 +22,8 @@ pipeline {
         }
         stage('Start service'){
             steps{
-                ssh 'ssh ubuntu@12.0.1.27 "pm2 start service"'
-                ssh 'ssh ubuntu@12.0.2.189 "pm2 start service"'
+                ssh 'ssh ubuntu@12.0.1.27 "pm2 restart service"'
+                ssh 'ssh ubuntu@12.0.2.189 "pm2 restart service"'
             }
         }
               
