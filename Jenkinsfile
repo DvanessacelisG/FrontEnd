@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {         
-        stage ('Clone & Clean') {
-              steps{
-                     sh "rm -rf FrontE_master"    
-                     sh "git clone https://github.com/DvanessacelisG/FrontEnd.git"
-              }
-        }
         stage ('Build') {
               steps{
                   dir('/var/lib/jenkins/workspace/'){
