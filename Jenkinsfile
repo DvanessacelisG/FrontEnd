@@ -20,7 +20,12 @@ pipeline {
             sshPublisher(publishers: [sshPublisherDesc(configName: 'ubuntu@12.0.2.189', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'tar zxvf movieanalyst-website.tar.gz && rsync -rpa FrontE_master', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: 'movieanalyst-website.tar.gz')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])                }
             }
         }
-        
+        stage('Start service'){
+            steps{
+                ssh 'ssh ubuntu@12.0.1.27 "pm2 start service"'
+                ssh 'ssh ubuntu@12.0.2.189 "pm2 start service"'
+            }
+        }
               
         
     }
